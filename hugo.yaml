@@ -24,19 +24,19 @@ params:
   twitter_cards: true
   shareTwitter: true
 
-  profileMode:
-    enabled: true
-    title: "Nabil BEN SALAH"
-    subtitle: "DevOps Engineer | Cloud Specialist"
-    imageUrl: "/images/profile.jpg"
-    imageTitle: "Profile Picture"
-    imageWidth: 120
-    imageHeight: 120
-    buttons:
-      - name: Archive
-        url: "/archive"
-      - name: GitHub
-        url: "https://github.com/bensalah-nabil"
+#  profileMode:
+#    enabled: true
+#    title: "Nabil BEN SALAH"
+#    subtitle: "DevOps Engineer | Cloud Specialist"
+#    imageUrl: "/images/profile.jpg"
+#    imageTitle: "Profile Picture"
+#    imageWidth: 120
+#    imageHeight: 120
+#    buttons:
+#      - name: Archive
+#        url: "/archive"
+#      - name: GitHub
+#        url: "https://github.com/bensalah-nabil"
 
   homeInfoParams:
     Title: "Hi there 👋"
