@@ -4,32 +4,26 @@ defaultContentLanguage: en
 title: Nabil BEN SALAH
 theme: PaperMod
 
-# Caching configuration
 caches:
   images:
     dir: ':cacheDir/images'
     maxAge: -1  # never expire
 
-# Site parameters
 params:
-  # Theme settings
   defaultTheme: dark
   enableThemeToggle: true
-  
-  # Content settings
+
   mainSections:
     - posts
   showReadingTime: true
   dateFormat: 'Mon, Jan 2, 2006'
-  
-  # SEO and metadata
+
   description: "My professional portfolio and blog"
   author: "Nabil BEN SALAH"
   opengraph: true
   twitter_cards: true
   shareTwitter: true
-  
-  # Profile settings
+
   profileMode:
     enabled: true
     title: "Nabil BEN SALAH"
@@ -43,19 +37,16 @@ params:
         url: "/archive"
       - name: GitHub
         url: "https://github.com/bensalah-nabil"
-  
-  # Home page intro
+
   homeInfoParams:
     Title: "Hi there 👋"
     Content: "Welcome to my personal website and blog about DevOps, Cloud, and Technology."
-  
-  # Contact information
+
   contact:
     email: nabil.bsalah0@gmail.com
     phone: "+216 26 210 043"
     location: "Tunis, Tunisia"
-  
-  # Social links
+
   socialIcons:
     - name: email
       url: "mailto:nabil.bsalah0@gmail.com"
@@ -65,8 +56,7 @@ params:
       url: "https://www.linkedin.com/in/nabil-ben-salah/"
     - name: twitter
       url: "https://twitter.com/yourusername"
-  
-  # Search functionality
+
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -74,28 +64,25 @@ params:
     distance: 1000
     threshold: 0.4
     minMatchCharLength: 2
-    keys: 
+    keys:
       - "title"
       - "permalink"
       - "summary"
       - "content"
       - "tags"
 
-# Output formats
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-# Table of Contents settings
 markup:
   tableOfContents:
     startLevel: 2
     endLevel: 6
     ordered: false
 
-# Build settings
 build:
   writeStats: true
   useResourceCacheWhen: fallback
