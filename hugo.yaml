@@ -64,7 +64,7 @@ languages:
         enabled: true
         title: "Nabil BEN SALAH"
         subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
-        imageUrl: "images/profile.jpg"
+        imageUrl: "images/profile.jpeg"
         imageTitle: "Profile Picture"
         imageWidth: 150
         imageHeight: 150

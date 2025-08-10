@@ -1,0 +1,15 @@
+<div class="project-card">
+  <h3><a href="{{ .Params.demo_url }}" target="_blank">{{ .Title }}</a></h3>
+  <div class="tech-stack">
+    {{ range .Params.tech_stack }}
+    <span class="tech-badge">{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ if .Params.screenshot }}
+  <img src="/images/{{ .Params.screenshot }}" alt="{{ .Title }} screenshot" class="project-screenshot">
+  {{ end }}
+  <div class="project-links">
+    {{ if .Params.demo_url }}<a href="{{ .Params.demo_url }}" target="_blank">Live Demo</a>{{ end }}
+    {{ if .Params.repo_url }}<a href="{{ .Params.repo_url }}" target="_blank">Source Code</a>{{ end }}
+  </div>
+</div>
