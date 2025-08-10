@@ -2,6 +2,7 @@ baseURL: 'https://nabil-bensalah.org/'
 languageCode: en-us
 title: Nabil BEN SALAH - DevOps Engineer
 theme: PaperMod
+paginate: 5  # NEW: Show 5 recent posts on homepage
 
 # Content Organization
 contentDir: content
@@ -13,7 +14,7 @@ enableEmoji: true
 minify:
   minifyOutput: true
 
-# Menu
+# Menu (Kept your structure but added Categories)
 menu:
   main:
     - name: Posts
@@ -37,23 +38,16 @@ menu:
 
 # Site Parameters
 params:
-#  profileMode:
-#    enabled: true
-#    title: "Nabil BEN SALAH"
-#    subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
-#    imageUrl: "images/profile.jpeg"
-#    imageWidth: 150
-#    imageHeight: 150
-#    buttons:
-#      - name: Posts
-#        url: posts/
-#      - name: Projects
-#        url: projects/
-#      - name: Contact
-#        url: contact/
-#      - name: Download CV
-#        url: cv.pdf
+  # NEW: Profile Mode (Uncomment to enable hero section)
+  # profileMode:
+  #   enabled: true
+  #   title: "Nabil BEN SALAH"
+  #   subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
+  #   imageUrl: "images/profile.jpeg"
+  #   imageWidth: 150
+  #   imageHeight: 150
 
+  # Homepage Config
   homeInfoParams:
     Title: "Hello, I'm Nabil BEN SALAH"
     Content: >
@@ -61,9 +55,23 @@ params:
       CI/CD pipelines, and container orchestration.
       Passionate about automation, infrastructure as code, and cloud-native technologies.
 
+  # NEW: Recent Posts Section
+  listParams:
+    mainSections: ['posts']  # Shows posts on homepage
+    showSummary: true        # Displays post excerpts
+
   # Appearance
   defaultTheme: dark
   enableThemeToggle: true
+
+  # NEW: Technical Content Features
+  ShowCodeCopyButtons: true    # Adds "Copy" buttons to code blocks
+  ShowPostNavLinks: true       # Next/Prev post navigation
+  markup:
+    highlight:
+      codeFences: true
+      lineNos: true            # Line numbers in code
+      style: "dracula"         # Dark syntax theme
 
   # Content Display
   showReadingTime: true
@@ -85,7 +93,11 @@ params:
     - name: twitter
       url: "https://x.com/NabilBe27242883"
 
-# Output Formats
+# NEW: Taxonomies (For Categories/Tags)
+taxonomies:
+  category: categories
+  tag: tags
+
 outputs:
   home:
     - HTML
