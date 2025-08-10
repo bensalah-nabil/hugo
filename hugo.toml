@@ -1,7 +1,7 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'Nabil BEN SALAH'
-theme = 'ananke'
+theme = 'PaperMod'
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
