@@ -2,7 +2,8 @@ baseURL: 'https://nabil-bensalah.org/'
 languageCode: en-us
 title: Nabil BEN SALAH - DevOps Engineer
 theme: PaperMod
-paginate: 5  # NEW: Show 5 recent posts on homepage
+pagination:
+  pagerSize: 5
 
 # Content Organization
 contentDir: content
@@ -102,3 +103,21 @@ outputs:
   home:
     - HTML
     - RSS
+
+server:
+  headers:
+  - for: /**
+    values:
+      # Content Security Policy (Allow GoatCounter + basic security)
+      Content-Security-Policy: "default-src 'self'; script-src 'self' https://*.goatcounter.com 'unsafe-inline'; connect-src 'self' https://*.goatcounter.com; img-src 'self' https://*.goatcounter.com data:; font-src 'self'; frame-src 'none'; object-src 'none'"
+      
+      # CORS Headers (Allow GoatCounter explicitly)
+      Access-Control-Allow-Origin: "https://*.goatcounter.com"
+      Access-Control-Allow-Methods: "GET, POST, OPTIONS"
+      Access-Control-Allow-Headers: "Content-Type, Referer"
+      
+      # Other security headers
+      Referrer-Policy: "strict-origin-when-cross-origin"
+      X-Content-Type-Options: "nosniff"
+      X-Frame-Options: "DENY"
+      X-XSS-Protection: "1; mode=block"
