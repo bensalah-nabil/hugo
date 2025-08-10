@@ -7,6 +7,16 @@ theme = 'PaperMod'
     dir = ':cacheDir/images'
 [params]
   defaultTheme = 'dark'
+    mainSections = ["post"]
+    intro = true
+    headline = "My headline"
+    description = "My description"
+    github = "https://github.com/XXX"
+    twitter = "https://twitter.com/XXX"
+    email = "XXX@example.com"
+    opengraph = true
+    shareTwitter = true
+    dateFormat = "Mon, Jan 2, 2006"
 
   [params.homeInfoParams]
     Title = "Hi there 👋"

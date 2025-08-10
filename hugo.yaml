@@ -1,0 +1,30 @@
+baseURL: 'https://example.org/'
+languageCode: en-us
+title: Nabil BEN SALAH
+theme: PaperMod
+caches:
+  images:
+    dir: ':cacheDir/images'
+params:
+  defaultTheme: dark
+  mainSections:
+    - post
+  intro: true
+  headline: My headline
+  description: My description
+  github: 'https://github.com/XXX'
+  twitter: 'https://twitter.com/XXX'
+  email: XXX@example.com
+  opengraph: true
+  shareTwitter: true
+  dateFormat: 'Mon, Jan 2, 2006'
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my website.
+  socialIcons:
+    - name: email
+      url: 'mailto:nabil.bsalah0@gmail.com'
+  contact:
+    email: nabil.bsalah0@gmail.com
+    phone: +216 26210043
+
