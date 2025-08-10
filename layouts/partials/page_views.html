@@ -1,43 +1,30 @@
 <span class="meta-item">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-    </svg>
-    &nbsp;
-    <span id="gc-container-{{ .File.UniqueID }}"></span>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="feather feather-activity"
+  >
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+    <circle cx="12" cy="12" r="3"></circle>
+  </svg>
+  &nbsp;
+  <span
+    id="{{ .File.UniqueID }}"
+    title="{{ i18n "article.page_views" }}"
+  ></span>
 </span>
-
 <script>
-    // Wait for goatcounter to load
-    var gcInterval = setInterval(function() {
-        if (window.goatcounter && window.goatcounter.visit_count) {
-            clearInterval(gcInterval)
-            
-            // Get the current path (using GoatCounter's method for consistency)
-            var path = window.goatcounter.get_data()['p'] || 
-                      encodeURIComponent({{ .RelPermalink }}.replace(/(\/)?$/, ''))
-            
-            window.goatcounter.visit_count({
-                append: '#gc-container-{{ .File.UniqueID }}',
-                path: path,
-                no_branding: true,
-                style: `
-                    #gcvc-views {
-                        font-weight: normal;
-                        color: inherit;
-                    }
-                    #gcvc-for {
-                        display: none;
-                    }
-                `,
-                attr: {
-                    title: {{ i18n "article.page_views" }},
-                    'aria-label': {{ i18n "article.page_views" }}
-                },
-                text: function(count) {
-                    return count + ' ' + {{ i18n "article.page_views" }};
-                }
-            })
-        }
-    }, 100)
-</script>
+    var r = new XMLHttpRequest();
+    r.addEventListener('load', function() {
+        document.getElementById('{{ .File.UniqueID }}').innerText = JSON.parse(this.responseText).count_unique + ' ' + {{ i18n "article.page_views" }}
+    })
+    r.open('GET', "https://{{ .Site.Params.goatcounter }}.goatcounter.com/counter/" + encodeURIComponent({{ .RelPermalink }}.replace(/(\/)?$/, '')) + '.json')
+    r.send()
+</script> {{- /* Trim EOF */ -}}

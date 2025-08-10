@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on Nabil BEN SALAH - DevOps Engineer</title><link>https://nabil-bensalah.org/posts/</link><description>Recent content in Posts on Nabil BEN SALAH - DevOps Engineer</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 14 Jan 2024 07:07:07 +0100</lastBuildDate><atom:link href="https://nabil-bensalah.org/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Post</title><link>https://nabil-bensalah.org/posts/my-first-post/</link><pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate><guid>https://nabil-bensalah.org/posts/my-first-post/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This is &lt;strong>bold&lt;/strong> text, and this is &lt;em>emphasized&lt;/em> text.&lt;/p>
+&lt;p>Visit the &lt;a href="https://gohugo.io">Hugo&lt;/a> website!&lt;/p></description><content:encoded><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
+<p>Visit the <a href="https://gohugo.io">Hugo</a> website!</p>
+]]></content:encoded></item></channel></rss>
