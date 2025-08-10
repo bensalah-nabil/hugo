@@ -34,16 +34,21 @@ params:
     subtitle: "This is subtitle"
     imageUrl: "<image link>" # optional
     imageTitle: "<title of image as alt>" # optional
-    imageWidth: 120 # custom size
-    imageHeight: 120 # custom size
+    imageWidth: 120
+    imageHeight: 120
     buttons:
       - name: Archive
         url: "/archive"
       - name: Github
         url: "https://github.com/"
 
-  socialIcons: # optional
-    - name: "<platform>"
-      url: "<link>"
-    - name: "<platform 2>"
-      url: "<link2>"
+  socialIcons:
+    - name: "Linkedin"
+      url: "https://www.linkedin.com/in/nabil-ben-salah/"
+    - name: "Github"
+      url: "https://github.com/bensalah-nabil"
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
