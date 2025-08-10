@@ -1,66 +1,101 @@
 baseURL: 'https://example.org/'
 languageCode: en-us
+defaultContentLanguage: en
 title: Nabil BEN SALAH
 theme: PaperMod
+
+# Caching configuration
 caches:
   images:
     dir: ':cacheDir/images'
-params:
-  defaultTheme: dark
-  mainSections:
-    - post
-  intro: true
-  headline: My headline
-  description: My description
-  github: 'https://github.com/XXX'
-  twitter: 'https://twitter.com/XXX'
-  email: XXX@example.com
-  opengraph: true
-  shareTwitter: true
-  dateFormat: 'Mon, Jan 2, 2006'
-  homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my website.
-  socialIcons:
-    - name: email
-      url: 'mailto:nabil.bsalah0@gmail.com'
-  contact:
-    email: nabil.bsalah0@gmail.com
-    phone: +216 26210043
+    maxAge: -1  # never expire
 
+# Site parameters
+params:
+  # Theme settings
+  defaultTheme: dark
+  enableThemeToggle: true
+  
+  # Content settings
+  mainSections:
+    - posts
+  showReadingTime: true
+  dateFormat: 'Mon, Jan 2, 2006'
+  
+  # SEO and metadata
+  description: "My professional portfolio and blog"
+  author: "Nabil BEN SALAH"
+  opengraph: true
+  twitter_cards: true
+  shareTwitter: true
+  
+  # Profile settings
   profileMode:
     enabled: true
-    title: "<Title>" # optional default will be site title
-    subtitle: "This is subtitle"
-    imageUrl: "<image link>" # optional
-    imageTitle: "<title of image as alt>" # optional
+    title: "Nabil BEN SALAH"
+    subtitle: "DevOps Engineer | Cloud Specialist"
+    imageUrl: "/images/profile.jpg"
+    imageTitle: "Profile Picture"
     imageWidth: 120
     imageHeight: 120
     buttons:
       - name: Archive
         url: "/archive"
-      - name: Github
-        url: "https://github.com/"
-
+      - name: GitHub
+        url: "https://github.com/bensalah-nabil"
+  
+  # Home page intro
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: "Welcome to my personal website and blog about DevOps, Cloud, and Technology."
+  
+  # Contact information
+  contact:
+    email: nabil.bsalah0@gmail.com
+    phone: "+216 26 210 043"
+    location: "Tunis, Tunisia"
+  
+  # Social links
   socialIcons:
-    - name: "Linkedin"
-      url: "https://www.linkedin.com/in/nabil-ben-salah/"
-    - name: "Github"
+    - name: email
+      url: "mailto:nabil.bsalah0@gmail.com"
+    - name: github
       url: "https://github.com/bensalah-nabil"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/nabil-ben-salah/"
+    - name: twitter
+      url: "https://twitter.com/yourusername"
+  
+  # Search functionality
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
     location: 0
     distance: 1000
     threshold: 0.4
-    minMatchCharLength: 0
-    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
-    keys: ["title", "permalink", "summary", "content"]
+    minMatchCharLength: 2
+    keys: 
+      - "title"
+      - "permalink"
+      - "summary"
+      - "content"
+      - "tags"
 
+# Output formats
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-ShowToc: true
+# Table of Contents settings
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+# Build settings
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback
