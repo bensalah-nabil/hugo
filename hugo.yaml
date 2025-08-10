@@ -37,22 +37,22 @@ menu:
 
 # Site Parameters
 params:
-  profileMode:
-    enabled: true
-    title: "Nabil BEN SALAH"
-    subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
-    imageUrl: "images/profile.jpeg"
-    imageWidth: 150
-    imageHeight: 150
-    buttons:
-      - name: Posts
-        url: posts/
-      - name: Projects
-        url: projects/
-      - name: Contact
-        url: contact/
-      - name: Download CV
-        url: cv.pdf
+#  profileMode:
+#    enabled: true
+#    title: "Nabil BEN SALAH"
+#    subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
+#    imageUrl: "images/profile.jpeg"
+#    imageWidth: 150
+#    imageHeight: 150
+#    buttons:
+#      - name: Posts
+#        url: posts/
+#      - name: Projects
+#        url: projects/
+#      - name: Contact
+#        url: contact/
+#      - name: Download CV
+#        url: cv.pdf
 
   homeInfoParams:
     Title: "Hello, I'm Nabil BEN SALAH"
