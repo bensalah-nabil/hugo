@@ -4,7 +4,23 @@ defaultContentLanguage: en
 title: Nabil BEN SALAH - DevOps Engineer
 theme: PaperMod
 
+# Content Organization
+contentDir: content
+staticDir: static
+dataDir: data
+i18nDir: i18n
+layoutsDir: layouts
+archetypeDir: archetypes
+assetDir: assets
+
 # Build Settings
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback
+  noJSConfigInAssets: false
+  cacheResources: true
+  resourceDir: "resources"
+
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -25,33 +41,28 @@ pagination:
   disableAliases: false
   pagerSize: 5
 
+# Languages Configuration
 languages:
   en:
     languageName: "English"
     weight: 1
     contentDir: content/en
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
+    title: "Nabil BEN SALAH - DevOps Engineer"
+    
     menu:
       main:
         - name: Posts
           url: posts/
           weight: 10
-          identifier: posts
         - name: Projects
           url: projects/
           weight: 20
-          identifier: projects
         - name: Contact
           url: contact/
           weight: 30
-          identifier: contact
         - name: CV
           url: cv/
           weight: 40
-          identifier: cv
         - name: Archive
           url: archives/
           weight: 50
@@ -65,7 +76,6 @@ languages:
         title: "Nabil BEN SALAH"
         subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
         imageUrl: "images/profile.jpeg"
-        imageTitle: "Profile Picture"
         imageWidth: 150
         imageHeight: 150
         buttons:
@@ -81,8 +91,8 @@ languages:
       homeInfoParams:
         Title: "Hello, I'm Nabil BEN SALAH"
         Content: >
-          DevOps Engineer with 5+ years of experience in cloud infrastructure, 
-          CI/CD pipelines, and container orchestration. 
+          DevOps Engineer with 5+ years of experience in cloud infrastructure,
+          CI/CD pipelines, and container orchestration.
           Passionate about automation, infrastructure as code, and cloud-native technologies.
 
   fr:
@@ -90,10 +100,7 @@ languages:
     weight: 2
     contentDir: content/fr
     title: "Nabil BEN SALAH - Ingénieur DevOps"
-    taxonomies:
-      category: categories
-      tag: tags
-      series: series
+    
     menu:
       main:
         - name: Articles
@@ -122,48 +129,35 @@ languages:
         subtitle: "Ingénieur DevOps | Spécialiste Cloud | Expert Kubernetes"
         imageUrl: "images/profile.jpeg"
 
-# Site Parameters
+# Global Site Parameters
 params:
+  env: production # Helps with conditional builds
+  
   # Appearance
   defaultTheme: dark
   enableThemeToggle: true
+  
+  # Assets
   assets:
     favicon: "favicon.ico"
     apple_touch_icon: "apple-touch-icon.png"
-
+  
   # Content Display
   showReadingTime: true
   dateFormat: 'January 2, 2006'
-  timeFormat: '15:04'
-
+  
   # Metadata
-  description: "Professional portfolio and technical blog of Nabil BEN SALAH - DevOps Engineer and Cloud Specialist"
+  description: "Professional portfolio and technical blog of Nabil BEN SALAH"
   author: "Nabil BEN SALAH"
-  copyright: "© 2025 Nabil BEN SALAH. All rights reserved."
-
-  # SEO
-  opengraph: true
-  twitter_cards: true
-  shareTwitter: true
-
+  copyright: "© 2025 Nabil BEN SALAH"
+  
   # Features
   ShowShareButtons: true
-  ShowReadingTime: true
-  displayFullLangName: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
-  ShowPageNums: true
   ShowToc: true
-  TocOpen: false
-
-  # Images
-  images: 
-    - "static/cover.jpg"
-    - "static/avatar.jpg"
-
+  
   # Social Links
   socialIcons:
     - name: email
@@ -175,35 +169,14 @@ params:
     - name: twitter
       url: "https://x.com/NabilBe27242883"
 
-  contact:
-    email: nabil.bsalah0@gmail.com
-    phone: "+216 26 210 043"
-
-  # Professional Information
-  skills:
-    - "Cloud Computing (AWS, Azure, GCP)"
-    - "Kubernetes & Docker"
-    - "Terraform & Ansible"
-    - "CI/CD Pipelines"
-    - "Linux Administration"
-
-  # Analytics
-  plausibleAnalytics: true
-  plausibleDomain: "nabil-bensalah.org"
-
-  utterances:
-    enable: true
-    repo: "bensalah-nabil/blog-comments"
-    issueTerm: "pathname"
-    theme: "github-dark"
-
+# Output Formats
 outputs:
   home:
     - HTML
     - RSS
     - JSON
-    - WebAppManifest
 
+# Markup Processing
 markup:
   goldmark:
     renderer:
@@ -211,19 +184,11 @@ markup:
   highlight:
     style: "github-dark"
     lineNos: true
-    lineNumbersInTable: true
   tableOfContents:
     startLevel: 2
     endLevel: 4
-    ordered: false
 
-build:
-  writeStats: true
-  useResourceCacheWhen: fallback
-  noJSConfigInAssets: false
-  cacheResources: true
-  resourceDir: "resources"
-
+# Services
 services:
   disqus:
     shortname: "nabil-bensalah-blog"
