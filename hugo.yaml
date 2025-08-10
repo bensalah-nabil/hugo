@@ -12,7 +12,7 @@ caches:
 params:
   defaultTheme: dark
   enableThemeToggle: true
-
+  favicon: /assets/favicon.ico
   mainSections:
     - posts
   showReadingTime: true
