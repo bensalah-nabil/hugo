@@ -49,6 +49,7 @@ params:
   #   imageHeight: 150
 
   # Homepage Config
+  goatcounter: 'nabil'
   homeInfoParams:
     Title: "Hello, I'm Nabil BEN SALAH"
     Content: >
