@@ -1,9 +1,11 @@
-baseURL: 'https://example.org/'
+# Site Configuration
+baseURL: 'https://nabil-bensalah.org/'
 languageCode: en-us
 defaultContentLanguage: en
-title: Nabil BEN SALAH
+title: Nabil BEN SALAH - DevOps Engineer
 theme: PaperMod
 
+# Build Settings
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -13,18 +15,25 @@ enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["posts", "projects", "contact", "cv"]
 
+# Performance Optimization
 minify:
   disableXML: true
-  # minifyOutput: true
+  minifyOutput: true
+  tdewolff:
+    html:
+      keepWhitespace: false
 
+# Pagination
 pagination:
   disableAliases: false
   pagerSize: 5
 
+# Multilingual Support
 languages:
   en:
     languageName: "English"
     weight: 1
+    contentDir: content/en
     taxonomies:
       category: categories
       tag: tags
@@ -32,19 +41,23 @@ languages:
     menu:
       main:
         - name: Posts
-          url: posts
+          url: posts/
           weight: 10
+          identifier: posts
         - name: Projects
-          url: projects
+          url: projects/
           weight: 20
+          identifier: projects
         - name: Contact
-          url: contact
+          url: contact/
           weight: 30
+          identifier: contact
         - name: CV
-          url: cv
+          url: cv/
           weight: 40
+          identifier: cv
         - name: Archive
-          url: archives
+          url: archives/
           weight: 50
         - name: Tags
           url: tags/
@@ -54,82 +67,91 @@ languages:
       profileMode:
         enabled: true
         title: "Nabil BEN SALAH"
-        subtitle: "DevOps Engineer | Cloud Specialist"
+        subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
         imageUrl: "images/profile.jpg"
         imageTitle: "Profile Picture"
-        imageWidth: 120
-        imageHeight: 120
+        imageWidth: 150
+        imageHeight: 150
         buttons:
           - name: Posts
-            url: posts
+            url: posts/
           - name: Projects
-            url: projects
+            url: projects/
           - name: Contact
-            url: contact
-          - name: CV
-            url: cv
+            url: contact/
+          - name: Download CV
+            url: cv.pdf
+
+      homeInfoParams:
+        Title: "Hello, I'm Nabil BEN SALAH"
+        Content: >
+          DevOps Engineer with 5+ years of experience in cloud infrastructure, 
+          CI/CD pipelines, and container orchestration. 
+          Passionate about automation, infrastructure as code, and cloud-native technologies.
 
   fr:
-    languageName: ":fr:"
+    languageName: "Français"
     weight: 2
-    title: PaperModL2
+    contentDir: content/fr
+    title: "Nabil BEN SALAH - Ingénieur DevOps"
     taxonomies:
-      category: FRcategories
-      tag: FRtags
-      series: FRseries
+      category: categories
+      tag: tags
+      series: series
     menu:
       main:
-        - name: Archive
+        - name: Articles
+          url: articles/
+          weight: 10
+        - name: Projets
+          url: projets/
+          weight: 20
+        - name: Contact
+          url: contact/
+          weight: 30
+        - name: CV
+          url: cv/
+          weight: 40
+        - name: Archives
           url: archives/
-          weight: 5
-        - name: FRTags
-          url: frtags
-          weight: 10
-        - name: FRCategories
-          url: frcategories
-          weight: 10
-        - name: FRSeries
-          url: frseries
-          weight: 10
-        - name: NullLink
-          url: "#"
+          weight: 50
+        - name: Mots-clés
+          url: tags/
+          weight: 60
 
     params:
-      languageAltTitle: French
+      profileMode:
+        enabled: true
+        title: "Nabil BEN SALAH"
+        subtitle: "Ingénieur DevOps | Spécialiste Cloud | Expert Kubernetes"
+        imageUrl: "images/profile.jpg"
 
-  fa:
-    languagedirection: rtl
-    weight: 3
-    title: PaperMod RTL
-    taxonomies:
-      category: FAcategories
-      tag: FAtags
-      series: FAseries
-    menu:
-      main:
-        - name: FATags
-          url: fatags
-          weight: 10
-    params:
-      homeInfoParams:
-        Title: "Hi there \U0001F44B"
-        Content: Welcome to RTL layout
-
+# Site Parameters
 params:
+  # Appearance
   defaultTheme: dark
   enableThemeToggle: true
-  mainSections:
-    - posts
-    - projects
+  assets:
+    favicon: "favicon.ico"
+    apple_touch_icon: "apple-touch-icon.png"
+  
+  # Content Display
   showReadingTime: true
-  dateFormat: 'Mon, Jan 2, 2006'
-
-  description: "My professional portfolio and blog"
+  dateFormat: 'January 2, 2006'
+  timeFormat: '15:04'
+  
+  # Metadata
+  description: "Professional portfolio and technical blog of Nabil BEN SALAH - DevOps Engineer and Cloud Specialist"
   author: "Nabil BEN SALAH"
+  copyright: "© 2023 Nabil BEN SALAH. All rights reserved."
+  
+  # SEO
   opengraph: true
   twitter_cards: true
   shareTwitter: true
-
+  googleAnalytics: "UA-XXXXX-X"  # Replace with your GA ID
+  
+  # Features
   ShowShareButtons: true
   ShowReadingTime: true
   displayFullLangName: true
@@ -140,42 +162,81 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
-  images: ["images/papermod-cover.png"]
-
-  homeInfoParams:
-    Title: "Nabil BEN SALAH"
-    Content: >
-      DevOps Engineer | Cloud Specialist
-
-      Welcome to my professional portfolio and blog.
-
+  TocOpen: false
+  
+  # Images
+  images: 
+    - "images/cover.jpg"
+    - "images/avatar.jpg"
+  
+  # Social Links
   socialIcons:
     - name: email
       url: "mailto:nabil.bsalah0@gmail.com"
     - name: github
       url: "https://github.com/bensalah-nabil"
+    - name: gitlab
+      url: "https://gitlab.com/bensalah-nabil"
     - name: linkedin
       url: "https://www.linkedin.com/in/nabil-ben-salah/"
     - name: twitter
-      url: "https://twitter.com/yourusername"
-
+      url: "https://twitter.com/nabil_bensalah"
+    - name: medium
+      url: "https://medium.com/@nabil.bensalah"
+  
+  # Contact Information
   contact:
     email: nabil.bsalah0@gmail.com
     phone: "+216 26 210 043"
     location: "Tunis, Tunisia"
+    calendly: "https://calendly.com/nabil-bensalah"
+  
+  # Professional Information
+  skills:
+    - "Cloud Computing (AWS, Azure, GCP)"
+    - "Kubernetes & Docker"
+    - "Terraform & Ansible"
+    - "CI/CD Pipelines"
+    - "Linux Administration"
+  
+  # Analytics
+  plausibleAnalytics: true
+  plausibleDomain: "nabil-bensalah.org"
+  
+  # Comments
+  utterances:
+    enable: true
+    repo: "bensalah-nabil/blog-comments"
+    issueTerm: "pathname"
+    theme: "github-dark"
 
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+    - WebAppManifest
 
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: "github-dark"
+    lineNos: true
+    lineNumbersInTable: true
   tableOfContents:
     startLevel: 2
-    endLevel: 6
+    endLevel: 4
     ordered: false
 
 build:
   writeStats: true
   useResourceCacheWhen: fallback
+  noJSConfigInAssets: false
+  cacheResources: true
+  resourceDir: "resources"
+
+services:
+  disqus:
+    shortname: "nabil-bensalah-blog"

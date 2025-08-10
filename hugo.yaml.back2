@@ -1,0 +1,181 @@
+baseURL: 'https://example.org/'
+languageCode: en-us
+defaultContentLanguage: en
+title: Nabil BEN SALAH
+theme: PaperMod
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "projects", "contact", "cv"]
+
+minify:
+  disableXML: true
+  # minifyOutput: true
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Posts
+          url: posts
+          weight: 10
+        - name: Projects
+          url: projects
+          weight: 20
+        - name: Contact
+          url: contact
+          weight: 30
+        - name: CV
+          url: cv
+          weight: 40
+        - name: Archive
+          url: archives
+          weight: 50
+        - name: Tags
+          url: tags/
+          weight: 60
+
+    params:
+      profileMode:
+        enabled: true
+        title: "Nabil BEN SALAH"
+        subtitle: "DevOps Engineer | Cloud Specialist"
+        imageUrl: "images/profile.jpg"
+        imageTitle: "Profile Picture"
+        imageWidth: 120
+        imageHeight: 120
+        buttons:
+          - name: Posts
+            url: posts
+          - name: Projects
+            url: projects
+          - name: Contact
+            url: contact
+          - name: CV
+            url: cv
+
+  fr:
+    languageName: ":fr:"
+    weight: 2
+    title: PaperModL2
+    taxonomies:
+      category: FRcategories
+      tag: FRtags
+      series: FRseries
+    menu:
+      main:
+        - name: Archive
+          url: archives/
+          weight: 5
+        - name: FRTags
+          url: frtags
+          weight: 10
+        - name: FRCategories
+          url: frcategories
+          weight: 10
+        - name: FRSeries
+          url: frseries
+          weight: 10
+        - name: NullLink
+          url: "#"
+
+    params:
+      languageAltTitle: French
+
+  fa:
+    languagedirection: rtl
+    weight: 3
+    title: PaperMod RTL
+    taxonomies:
+      category: FAcategories
+      tag: FAtags
+      series: FAseries
+    menu:
+      main:
+        - name: FATags
+          url: fatags
+          weight: 10
+    params:
+      homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to RTL layout
+
+params:
+  defaultTheme: dark
+  enableThemeToggle: true
+  mainSections:
+    - posts
+    - projects
+  showReadingTime: true
+  dateFormat: 'Mon, Jan 2, 2006'
+
+  description: "My professional portfolio and blog"
+  author: "Nabil BEN SALAH"
+  opengraph: true
+  twitter_cards: true
+  shareTwitter: true
+
+  ShowShareButtons: true
+  ShowReadingTime: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  images: ["images/papermod-cover.png"]
+
+  homeInfoParams:
+    Title: "Nabil BEN SALAH"
+    Content: >
+      DevOps Engineer | Cloud Specialist
+
+      Welcome to my professional portfolio and blog.
+
+  socialIcons:
+    - name: email
+      url: "mailto:nabil.bsalah0@gmail.com"
+    - name: github
+      url: "https://github.com/bensalah-nabil"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/nabil-ben-salah/"
+    - name: twitter
+      url: "https://twitter.com/yourusername"
+
+  contact:
+    email: nabil.bsalah0@gmail.com
+    phone: "+216 26 210 043"
+    location: "Tunis, Tunisia"
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+build:
+  writeStats: true
+  useResourceCacheWhen: fallback
