@@ -120,7 +120,7 @@ languages:
         enabled: true
         title: "Nabil BEN SALAH"
         subtitle: "Ingénieur DevOps | Spécialiste Cloud | Expert Kubernetes"
-        imageUrl: "static/profile.jpeg"
+        imageUrl: "images/profile.jpeg"
 
 # Site Parameters
 params:
