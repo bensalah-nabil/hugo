@@ -2,20 +2,19 @@ baseURL: 'https://nabil-bensalah.org/'
 languageCode: en-us
 title: Nabil BEN SALAH - DevOps Engineer
 theme: PaperMod
-pagination:
-  pagerSize: 5
-
-# Content Organization
+pagination.pagerSize: 25
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+enableGitInfo: true
 contentDir: content
 staticDir: static
-
-# Build Settings
-buildDrafts: false
 enableEmoji: true
 minify:
   minifyOutput: true
 
-# Menu (Kept your structure but added Categories)
 menu:
   main:
     - name: Posts
@@ -37,19 +36,27 @@ menu:
       url: tags/
       weight: 60
 
-# Site Parameters
 params:
-  # NEW: Profile Mode (Uncomment to enable hero section)
-  # profileMode:
-  #   enabled: true
-  #   title: "Nabil BEN SALAH"
-  #   subtitle: "DevOps Engineer | Cloud Specialist | Kubernetes Expert"
-  #   imageUrl: "images/profile.jpeg"
-  #   imageWidth: 150
-  #   imageHeight: 150
-
-  # Homepage Config
   goatcounter: 'nabil'
+  howReadingTime: true
+  ShowPageViews: true
+  ShowLikes: false
+  ShowShareButtons: false
+  ShowBreadCrumbs: true
+  ShowWordCount: true
+  ShowLastMod: true
+  ShowGitRevision: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: true
+  tocopen: false
+  SeriesOpen: false
+
   homeInfoParams:
     Title: "Hello, I'm Nabil BEN SALAH"
     Content: >
@@ -57,16 +64,13 @@ params:
       CI/CD pipelines, and container orchestration.
       Passionate about automation, infrastructure as code, and cloud-native technologies.
 
-  # NEW: Recent Posts Section
   listParams:
     mainSections: ['posts']  # Shows posts on homepage
     showSummary: true        # Displays post excerpts
 
-  # Appearance
   defaultTheme: dark
   enableThemeToggle: true
 
-  # NEW: Technical Content Features
   ShowCodeCopyButtons: true    # Adds "Copy" buttons to code blocks
   ShowPostNavLinks: true       # Next/Prev post navigation
   markup:
@@ -75,16 +79,13 @@ params:
       lineNos: true            # Line numbers in code
       style: "dracula"         # Dark syntax theme
 
-  # Content Display
   showReadingTime: true
   dateFormat: 'January 2, 2006'
 
-  # Metadata
   description: "Professional portfolio and technical blog of Nabil BEN SALAH"
   author: "Nabil BEN SALAH"
   copyright: "© 2025 Nabil BEN SALAH"
 
-  # Social Links
   socialIcons:
     - name: email
       url: "mailto:nabil.bsalah0@gmail.com"
@@ -95,7 +96,6 @@ params:
     - name: twitter
       url: "https://x.com/NabilBe27242883"
 
-# NEW: Taxonomies (For Categories/Tags)
 taxonomies:
   category: categories
   tag: tags
@@ -104,21 +104,3 @@ outputs:
   home:
     - HTML
     - RSS
-
-server:
-  headers:
-  - for: /**
-    values:
-      # Content Security Policy (Allow GoatCounter + basic security)
-      Content-Security-Policy: "default-src 'self'; script-src 'self' https://*.goatcounter.com 'unsafe-inline'; connect-src 'self' https://*.goatcounter.com; img-src 'self' https://*.goatcounter.com data:; font-src 'self'; frame-src 'none'; object-src 'none'"
-      
-      # CORS Headers (Allow GoatCounter explicitly)
-      Access-Control-Allow-Origin: "https://*.goatcounter.com"
-      Access-Control-Allow-Methods: "GET, POST, OPTIONS"
-      Access-Control-Allow-Headers: "Content-Type, Referer"
-      
-      # Other security headers
-      Referrer-Policy: "strict-origin-when-cross-origin"
-      X-Content-Type-Options: "nosniff"
-      X-Frame-Options: "DENY"
-      X-XSS-Protection: "1; mode=block"
