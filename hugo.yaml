@@ -26,7 +26,7 @@ menu:
     - name: Contact
       url: contact/
       weight: 30
-    - name: CV
+    - name: Resume
       url: resume/
       weight: 40
     - name: Archive
