@@ -5,7 +5,7 @@ layout: single
 
 # Resume
 
-Download my resume: [Download PDF](/resume/resume.pdf){target=_blank}
+Download my resume: [Download PDF](/resume/resume.pdf)
 
 ---
 
