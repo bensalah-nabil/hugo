@@ -35,7 +35,7 @@ This series is my attempt to document and share that journey.
 
 Here’s the high-level architecture of my current setup:  
 
-{{< figure src="/assets/homelab-architecture.png" alt="Homelab Architecture Diagram" caption="Global architecture of my homelab on Proxmox VE" >}}
+{{< figure src="/proxmox/homelab-architecture.png" alt="Homelab Architecture Diagram" caption="Global architecture of my homelab on Proxmox VE" >}}
 
 - **Proxmox VE** is the virtualization layer.  
 - **pfSense** acts as a firewall and router.  
