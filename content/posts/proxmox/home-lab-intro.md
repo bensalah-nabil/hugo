@@ -1,5 +1,5 @@
 +++ 
-date = '2025-09-03T15:08:47Z' 
+date = '2025-09-03T16:00:47Z' 
 draft = false
 title = 'Building My Homelab – Why and How' 
 +++
