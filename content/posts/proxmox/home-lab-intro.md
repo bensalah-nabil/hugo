@@ -1,7 +1,8 @@
 +++ 
 date = '2025-09-03T16:00:47Z' 
-draft = false
-title = 'Building My Homelab – Why and How' 
+draft = false 
+title = 'Building My Homelab – Why and How'
+tags = ['proxmoxVE'] 
 +++
 
 ## 🏠 What is a Homelab?
