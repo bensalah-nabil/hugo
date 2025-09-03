@@ -1,6 +1,6 @@
 +++ 
 date = '2025-09-01T15:08:47Z' 
-draft = false
+draft = true 
 title = 'Building My Homelab – Why and How' 
 +++
 
@@ -35,7 +35,7 @@ This series is my attempt to document and share that journey.
 
 Here’s the high-level architecture of my current setup:  
 
-![Homelab Architecture](5bad60fa-354b-45c3-9bca-bf4c0b633dc0.png)
+{{< figure src="/assets/homelab-architecture.png" alt="Homelab Architecture Diagram" caption="Global architecture of my homelab on Proxmox VE" >}}
 
 - **Proxmox VE** is the virtualization layer.  
 - **pfSense** acts as a firewall and router.  
