@@ -23,18 +23,18 @@ menu:
     - name: Projects
       url: projects/
       weight: 20
-    - name: Contact
-      url: contact/
-      weight: 30
+#    - name: Contact
+#      url: contact/
+#      weight: 30
     - name: Resume
       url: resume/
-      weight: 40
+      weight: 30
     - name: Archive
       url: archives/
-      weight: 50
+      weight: 40
     - name: Tags
       url: tags/
-      weight: 60
+      weight: 50
 
 params:
   goatcounter: 'nabil'
